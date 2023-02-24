@@ -40,7 +40,7 @@ class Solution:
             current[student] = -1
   
         #while list of free hospitals isnt empty
-        while len(freehospital) != 0:
+        while freehospital:
             
             #grab an unpaired hospital
             hospital = freehospital[0]
@@ -79,7 +79,7 @@ class Solution:
                     if openslots[hospital] == 0:
                         break                
 
-            #after break, pop matched hospital off            
+            #pop matched hospital off            
             freehospital.pop(0)
 
 
