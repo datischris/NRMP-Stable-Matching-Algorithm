@@ -36,7 +36,7 @@ class Solution:
         openslots = self.hosp_open_slots
 
         #init current matchings dict
-        for student in self.hospital_list:
+        for student in freestudent:
             current[student] = -1
   
         #while list of free hospitals isnt empty
