@@ -28,12 +28,12 @@ class Solution:
             return False    
 
     def get_matches(self):
-        
-        matchings = list()
+        openslots = self.hosp_open_slots
         freehospital = list(self.hospital_list.keys())
         freestudent = list(self.student_list.keys())
         current = dict()
-        openslots = self.hosp_open_slots
+        matchings = list()
+       
 
         #init current matchings dict
         for student in freestudent:
@@ -77,7 +77,7 @@ class Solution:
                         
                     #check if all slots are full
                     if openslots[hospital] == 0:
-                        break                
+                        break
 
             #pop matched hospital off            
             freehospital.pop(0)
